@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- BEGIN: Page Main-->
+<div id="main">
+    <div class="row">
+
+        <div class="col s6" style="padding-left: 40px !important;">
+            <div class="container">
+                <div class="section">
+
+                    <!--file-upload-->
+                    <div class="section" id="file-upload">
+
+                        <!--Set dropzone height-->
+                        <div class="row section">
+
+                            <div class="row">
+
+                                <p>Upload file:</p>
+                                <form class="formValidate0" id="formValidate1" method="post" action="/file_upload"
+                                      enctype="multipart/form-data">
+                                    <input class="dropify" data-height="300" id="input-file-now-custom-2" type="file"
+                                           name="upfile" required/>
+
+                                </form>
+                            </div>
+                        </div>
+                        <!--use events-->
+
+                    </div>
+                </div><!-- START RIGHT SIDEBAR NAV -->
+            </div>
+            <div class="content-overlay"></div>
+        </div>
+        <div class="col s1"></div>
+        <div id="count_prog" class="col s5 progress" style="margin-top: 57px; display:none;" >
+          <div class="indeterminate"></div>
+        </div>
+        <div id="count_result" class="col s5" style="margin-top: 57px; display:none;">
+            <div id="html-validations" class="card card-tabs">
+                <div class="card-content">
+                    <div class="card-title">
+                        <div class="row">
+                            <div class="col s12 m6 l10">
+                                <h4 class="card-title">Output</h4>
+                            </div>
+                            <div class="col s12 m6 l2">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="html-view-validations">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <label for="cword" class=""><b>Words</b></label>
+                                <br />
+                                <input class="validate" disabled="" id="cword"  type="text">
+                            </div>
+                            <div class="input-field col s12">
+                                <label for="cchar"><b>Characters without spaces</b></label>
+                                <br />
+                                <input class="validate" disabled="" id="cchar" type="text" >
+                            </div>
+                            <div class="input-field col s12">
+                                <label><b>Frequency(Character)</b></label>
+                                <br />
+                                <br />
+                                <div id="repeat_char">
+                                </div>
+                            </div>
+                            <div class="input-field col s12">
+                                <label><b>Frequency(Word)</b></label>
+                                <br />
+                                <br />
+                                <div id="repeat_word">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<!-- END: Page Main-->
+{% endblock %}
+

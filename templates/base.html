@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html class="loading" data-textdirection="ltr" lang="en">
+<!-- BEGIN: Head-->
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui" name="viewport">
+    <title>Welcome Admin</title>
+    <link href="../../../static/images/favicon/apple-touch-icon-152x152.png" rel="apple-touch-icon">
+    <link href="../../../static/images/favicon/favicon-32x32.png" rel="shortcut icon" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- BEGIN: VENDOR CSS-->
+    <link href="../../../static/vendors/vendors.min.css" rel="stylesheet" type="text/css">
+    <link href="../../../static/vendors/flag-icon/css/flag-icon.min.css" rel="stylesheet" type="text/css">
+    <link href="../../../static/vendors/dropify/css/dropify.min.css" rel="stylesheet" type="text/css">
+    <!-- END: VENDOR CSS-->
+    <!-- BEGIN: Page Level CSS-->
+    <link href="../../../static/css/themes/vertical-modern-menu-template/materialize.css" rel="stylesheet"
+          type="text/css">
+    <link href="../../../static/css/themes/vertical-modern-menu-template/style.css" rel="stylesheet" type="text/css">
+    <!-- END: Page Level CSS-->
+    <!-- BEGIN: Custom CSS-->
+    <link href="../../../static/css/custom/custom.css" rel="stylesheet" type="text/css">
+    <!-- END: Custom CSS-->
+</head>
+<!-- END: Head-->
+<body class="vertical-layout vertical-menu-collapsible page-header-dark vertical-modern-menu preload-transitions 2-columns   "
+      data-col="2-columns" data-menu="vertical-modern-menu" data-open="click">
+
+<!-- BEGIN: Header-->
+<header class="page-topbar" id="header">
+    <div class="navbar navbar-fixed">
+        <nav class="navbar-main navbar-color nav-collapsible sideNav-lock navbar-dark gradient-45deg-indigo-purple no-shadow">
+            <div class="nav-wrapper">
+
+
+                <ul class="navbar-list right">
+                    <li><a class="waves-effect waves-block waves-light profile-button" data-target="profile-dropdown"
+                           href="javascript:void(0);"><span class="avatar-status"><img
+                            alt="avatar" src="../../../static/images/avatar/newav.png"></span></a></li>
+                </ul>
+                <!-- profile-dropdown-->
+                <ul class="dropdown-content" id="profile-dropdown">
+                    ̵
+                    <li><a class="grey-text text-darken-1" href="{{ url_for('.update_password') }}"><i class="material-icons">lock_outline</i>Password</a>
+                    </li>
+                    <li><a class="grey-text text-darken-1" href="{{ url_for('.logout') }}"><i
+                            class="material-icons">keyboard_tab</i> Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+<!-- END: Header-->
+
+
+
+<!-- BEGIN: SideNav-->
+<aside class="sidenav-main nav-expanded nav-lock nav-collapsible sidenav-light sidenav-active-square">
+    <div class="brand-sidebar">
+        <h1 class="logo-wrapper"><a class="brand-logo darken-1" href="{{ url_for('.dashboard') }}"><img alt="lighthouse logo"
+                                                                                       class="hide-on-med-and-down"
+                                                                                       src="../../../static/images/logo/lightlogo.png"/><img
+                alt="lighthouse logo"
+                class="show-on-medium-and-down hide-on-med-and-up" src="../../../static/images/logo/materialize-logo.png"/><span
+                class="logo-text hide-on-med-and-down">LightHouse</span></a></h1>
+    </div>
+    <ul class="sidenav sidenav-collapsible leftside-navigation collapsible sidenav-fixed menu-shadow" data-collapsible="menu-accordion"
+        data-menu="menu-navigation" id="slide-out">
+
+
+        <li class="active bold"><a class="waves-effect waves-cyan active " href="{{ url_for('.dashboard') }}"><i
+                class="material-icons">image_aspect_ratio</i><span class="menu-title"
+                                                                   data-i18n="Form Layouts">Dashboard</span></a>
+        </li>
+
+
+    </ul>
+    <div class="navigation-background"></div>
+    <a class="sidenav-trigger btn-sidenav-toggle btn-floating btn-medium waves-effect waves-light hide-on-large-only"
+       data-target="slide-out" href="#"><i class="material-icons">menu</i></a>
+</aside>
+<!-- END: SideNav-->
+{% block content %}{% endblock %}
+<!-- BEGIN: Footer-->
+
+<footer class="page-footer footer footer-static footer-dark gradient-45deg-indigo-purple gradient-shadow navbar-border navbar-shadow">
+    <div class="footer-copyright">
+        <div class="container"><span>&copy; 2024 | All rights reserved.</span></div>
+    </div>
+</footer>
+
+<!-- END: Footer-->
+<!-- BEGIN VENDOR JS-->
+<script src="../../../static/js/vendors.min.js"></script>
+<!-- BEGIN VENDOR JS-->
+<!-- BEGIN PAGE VENDOR JS-->
+<script src="../../../static/vendors/dropify/js/dropify.min.js"></script>
+<!-- END PAGE VENDOR JS-->
+<!-- BEGIN THEME  JS-->
+<script src="../../../static/js/plugins.js"></script>
+<script src="../../../static/js/search.js"></script>
+<script src="../../../static/js/custom/custom-script.js"></script>
+<script src="../../../static/js/scripts/customizer.js"></script>
+<!-- END THEME  JS-->
+<!-- BEGIN PAGE LEVEL JS-->
+<script src="../../../static/js/scripts/form-file-uploads.js"></script>
+<!-- END PAGE LEVEL JS-->
+</body>
+</html>
